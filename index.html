@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý mảng số</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        input[type="number"], input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        input[type="number"], input[type="text"], button {
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #00796b;
+            font-size: 1.5em;
+        }
+        #arrayDisplay {
+            font-size: 1.2em;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản lý mảng số</h1>
+
+    <div class="input-group">
+        <input type="number" id="inputNumber" placeholder="Nhập số n">
+        <button onclick="addNumber()">Thêm số</button>
+    </div>
+
+    <div class="section">
+        <h3>Mảng hiện tại:</h3>
+        <div id="arrayDisplay">Chưa có số nào trong mảng.</div>
+    </div>
+
+    <div class="section">
+        <h3>Chọn chức năng:</h3>
+        <div>
+            <button onclick="sumPositiveNumbers()">1. Tổng các số dương</button>
+            <div class="result" id="result1"></div>
+        </div>
+        <div>
+            <button onclick="countPositiveNumbers()">2. Đếm số dương</button>
+            <div class="result" id="result2"></div>
+        </div>
+        <div>
+            <button onclick="findSmallestNumber()">3. Tìm số nhỏ nhất</button>
+            <div class="result" id="result3"></div>
+        </div>
+        <div>
+            <button onclick="findSmallestPositiveNumber()">4. Tìm số dương nhỏ nhất</button>
+            <div class="result" id="result4"></div>
+        </div>
+        <div>
+            <button onclick="findLastEvenNumber()">5. Tìm số chẵn cuối cùng</button>
+            <div class="result" id="result5"></div>
+        </div>
+        <div class="input-group">
+            <button onclick="swapPositions()">6. Đổi chỗ 2 giá trị</button>
+            <input type="number" id="index1" placeholder="Vị trí thứ nhất">
+            <input type="number" id="index2" placeholder="Vị trí thứ hai">
+            <div class="result" id="result6"></div>
+        </div>
+        <div>
+            <button onclick="sortArray()">7. Sắp xếp tăng dần</button>
+            <div class="result" id="result7"></div>
+        </div>
+        <div>
+            <button onclick="findFirstPrime()">8. Tìm số nguyên tố đầu tiên</button>
+            <div class="result" id="result8"></div>
+        </div>
+        <div class="input-group">
+            <button onclick="countIntegersInRealArray()">9. Đếm số nguyên trong mảng thực</button>
+            <input type="text" id="realArrayInput" placeholder="Nhập mảng số thực, phân cách bởi dấu phẩy">
+            <div class="result" id="result9"></div>
+        </div>
+        <div>
+            <button onclick="comparePositiveNegative()">10. So sánh số lượng số dương và số âm</button>
+            <div class="result" id="result10"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
